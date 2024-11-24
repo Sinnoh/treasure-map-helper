@@ -1,0 +1,38 @@
+<div class="grid">
+
+
+  <div class="col-10 col-offset-1 text-6xl flex justify-content-center mb-4">
+    {{ counter$|async | number }}
+  </div>
+
+
+
+  @if (steps !== undefined && steps.length > 0) {
+    @for (step of steps; track step) {
+
+      <div class="col-6 lg:col-4">
+        <p-button icon="pi pi-plus" [label]="(step | number) ?? ''" (click)="incrementCounter(step)"
+                  styleClass="w-full"/>
+      </div>
+
+    }
+  } @else {
+    <div class="col-4 col-offset-4">
+      <p-button icon="pi pi-plus" (click)="incrementCounter()" styleClass="w-full h-6rem"/>
+    </div>
+  }
+
+  @if (showCustom) {
+    <div class="col-12 lg:col-8 mt-4 flex">
+      <p-inputNumber inputId="customValue" [(ngModel)]="customValue" styleClass="mr-3" class="w-6"/>
+      <p-button icon="pi pi-plus" label="Custom" (click)="addCustom()" class="w-6"/>
+    </div>
+    <div class="col-4"><!--spacer--></div>
+  }
+</div>
+
+@if (showUndo) {
+  <div class="absolute top-0 mt-4 right-0 mr-4">
+    <p-button icon="pi pi-undo" (click)="undo()" label="Undo" [disabled]="pastValues.length === 0"/>
+  </div>
+}

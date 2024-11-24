@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@use "../node_modules/primeflex/primeflex.css" as primeflex;
+@use "../node_modules/primeicons/primeicons.css" as primeicons;
+
+/* Order */
+@layer reset, primeng, primeicons, primeflex;
+
+
+@layer reset {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
