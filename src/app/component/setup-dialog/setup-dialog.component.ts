@@ -5,14 +5,15 @@ import {Button} from "primeng/button";
 import {DynamicDialogRef} from "primeng/dynamicdialog";
 
 @Component({
-    selector: 'app-setup-dialog',
-    imports: [
-        InputNumberModule,
-        ReactiveFormsModule,
-        Button
-    ],
-    templateUrl: './setup-dialog.component.html',
-    styleUrl: './setup-dialog.component.scss'
+  selector: 'app-setup-dialog',
+  imports: [
+    InputNumberModule,
+    ReactiveFormsModule,
+    Button
+  ],
+  templateUrl: './setup-dialog.component.html',
+  standalone: true,
+  styleUrl: './setup-dialog.component.scss'
 })
 export class SetupDialogComponent {
 

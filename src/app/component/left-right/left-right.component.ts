@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import {Button} from "primeng/button";
 
 @Component({
-    selector: 'app-left-right',
-    imports: [
-        Button
-    ],
-    templateUrl: './left-right.component.html',
-    styleUrl: './left-right.component.scss'
+  selector: 'app-left-right',
+  imports: [
+    Button
+  ],
+  templateUrl: './left-right.component.html',
+  standalone: true,
+  styleUrl: './left-right.component.scss'
 })
 export class LeftRightComponent {
 

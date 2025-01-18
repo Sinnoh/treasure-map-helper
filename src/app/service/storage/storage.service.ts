@@ -28,7 +28,7 @@ export class StorageService {
   }
 
   private loadData():DataModel{
-    let dataFromStore =  window.localStorage.getItem(StorageService.COUNTER_KEY);
+    const dataFromStore =  window.localStorage.getItem(StorageService.COUNTER_KEY);
 
     if(!dataFromStore){
       const defaultData = this.getDefaultData();
@@ -47,7 +47,7 @@ export class StorageService {
     counter$.pipe(
       takeUntilDestroyed(this.destroyRef)
     ).subscribe(newValue => {
-      let newData: DataModel = {
+      const newData: DataModel = {
         ...this._data,
         counters: {
           ...this._data.counters,

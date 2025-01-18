@@ -8,16 +8,17 @@ import {InputNumberModule} from "primeng/inputnumber";
 import {FormsModule} from '@angular/forms';
 
 @Component({
-    selector: 'app-counter',
-    imports: [
-        AsyncPipe,
-        Button,
-        DecimalPipe,
-        InputNumberModule,
-        FormsModule
-    ],
-    templateUrl: './counter.component.html',
-    styleUrl: './counter.component.scss'
+  selector: 'app-counter',
+  imports: [
+    AsyncPipe,
+    Button,
+    DecimalPipe,
+    InputNumberModule,
+    FormsModule
+  ],
+  templateUrl: './counter.component.html',
+  standalone: true,
+  styleUrl: './counter.component.scss'
 })
 export class CounterComponent implements OnInit {
 
@@ -57,7 +58,7 @@ export class CounterComponent implements OnInit {
   }
 
   protected undo(){
-    let lastCounterValue = this.pastValues.pop();
+    const lastCounterValue = this.pastValues.pop();
 
     if(lastCounterValue){
       this._counter$.next(lastCounterValue);
