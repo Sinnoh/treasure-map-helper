@@ -12,12 +12,11 @@ import {DialogService} from "primeng/dynamicdialog";
 import {SetupDialogComponent} from "./component/setup-dialog/setup-dialog.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, CardModule, CounterComponent, LeftRightComponent, StyleClassModule, Button,ConfirmDialogModule],
-  providers: [ConfirmationService, MessageService,DialogService],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, CardModule, CounterComponent, LeftRightComponent, StyleClassModule, Button, ConfirmDialogModule],
+    providers: [ConfirmationService, MessageService, DialogService],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
   title = 'TreasureMapHelper';

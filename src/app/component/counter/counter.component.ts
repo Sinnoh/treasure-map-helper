@@ -8,17 +8,16 @@ import {InputNumberModule} from "primeng/inputnumber";
 import {FormsModule} from '@angular/forms';
 
 @Component({
-  selector: 'app-counter',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    Button,
-    DecimalPipe,
-    InputNumberModule,
-    FormsModule
-  ],
-  templateUrl: './counter.component.html',
-  styleUrl: './counter.component.scss'
+    selector: 'app-counter',
+    imports: [
+        AsyncPipe,
+        Button,
+        DecimalPipe,
+        InputNumberModule,
+        FormsModule
+    ],
+    templateUrl: './counter.component.html',
+    styleUrl: './counter.component.scss'
 })
 export class CounterComponent implements OnInit {
 
